@@ -1,0 +1,17 @@
+{
+    "name":"taskrunner",
+    "version":"1.0.0",
+    "description":"",
+    "main":"index.js",
+    "scripts":{
+        "init-project":"npm install && npm run init:dirs && npm run init:files && npm run init-gitignore",
+        "init:dirs":"mkdir sass css vendor images js",
+        "init:files":"touch README.md index.html sass/style.scss js/main.js",
+        "init-gitignore":"https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+
+        "test":"echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords":[],
+    "author":"",
+    "license":"ISC",
+}
