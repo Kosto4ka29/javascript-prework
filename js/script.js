@@ -1,50 +1,26 @@
-var buttonPaper, buttonRock, buttonScissors, x, button;
+const buttonPaper = document.getElementById('button-paper');
+const buttonRock = document.getElementById('button-rock');
+const buttonScissors = document.getElementById('button-scissors');
 
-/**
- * Describe this function...
- */
-function do_something(buttonPaper) {
-  clearMessages();
-  console.log(buttonPaper + ' został kliknięty');
-}
-
-/**
- * Describe this function...
- */
-function buttonClicked(buttonRock) {
-  clearMessages();
-  console.log(buttonRock + ' został kliknięty');
-}
-
-/**
- * Describe this function...
- */
-function buttonClicked2(buttonScissors) {
-  clearMessages();
-  console.log(buttonScissors + ' został kliknięty');
-}
-buttonRock = document.getElementById('button-rock');
 buttonRock.addEventListener('click', function(){ buttonClicked('Kamień'); });
-buttonPaper = document.getElementById('button-paper');
 buttonPaper.addEventListener('click', function(){ buttonClicked('Papier'); });
-buttonScissors = document.getElementById('button-scissors');
 buttonScissors.addEventListener('click', function(){ buttonClicked('Nożyce'); });
 
-var computerMove, randomNumber;
-randomNumber = Math.floor(Math.random() * 3 + 1);
+let computerMove;
+let randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
-if (randomNumber == '1') {
+if (randomNumber == 1) {
   computerMove = 'kamień';
-} else if (randomNumber == '2') {
+} else if (randomNumber == 2) {
   computerMove = 'papier';
-} else if (randomNumber == '3') {
+} else if (randomNumber == 3) {
   computerMove = 'nożyce';
 } else {
   computerMove = 'nieznany ruch';
 }
 printMessage('Mój ruch: ' + computerMove);
 
-var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
+let argMoveId, argPlayerMove, argComputerMove, playerMove, playerInput;
 
 /**
  * Describe this function...
@@ -91,6 +67,7 @@ function displayResult(argPlayerMove, argComputerMove) {
   }
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 }
+
 playerMove = argButtonName;
 randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
