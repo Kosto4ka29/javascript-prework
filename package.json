@@ -1,5 +1,5 @@
 {
-    "name": "blog",
+    "name": "task-runner",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -17,7 +17,7 @@
       "html-validate":"HTML-VALIDATE *.html",
   
       "watch":"npm-run-all build build-dev -p watch:*",
-      "watch:browsersync": "browser-sync start --server --files \"css/*.css\" \"*.html\"",
+      "watch:browsersync": "browser-sync start --server --files \"css/*.css\" \"*.html\" \"js/*.js\"",
       "watch:sassprefixer": "onchange sass/*.scss -- npm run build-dev"
     },
     "keywords": [],
