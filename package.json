@@ -5,8 +5,9 @@
     "main": "index.js",
     "scripts": {
       "init-project": "npm install && npm-run-all init:*",
-      "init:dirs": "mkdir sass css vendor images js",
-      "init:files": "touch README.md index.html sass/style.scss js/scripts.js",
+      "init:dirs": "mkdir sass css vendor images js 2> nul || echo 'Directories already exist'",
+      "init:files": "echo.> README.md & echo.> index.html & echo.> sass/style.scss & echo.> js/scripts.js",
+
       "init-gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
       
       "test": "npm run test:html",
