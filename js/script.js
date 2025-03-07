@@ -1,11 +1,10 @@
 'use strict';
 
 function titleClickHandler(){
-  console.log('Link was clicked!');
+  const links = document.querySelectorAll('.titles a');
+  console.log(links);
 }
 
-const links = document.querySelectorAll('.titles a');
+const buttonTest = document.getElementById('button-test');
 
-for(let link of links){
-  link.addEventListener('click', titleClickHandler);
-}
+buttonTest.addEventListener('click', titleClickHandler);
