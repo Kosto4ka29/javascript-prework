@@ -1,6 +1,9 @@
 'use strict';
 
 function titleClickHandler(event) {
+  // Log the event object to the console
+  console.log(event);
+
   console.log('Link was clicked!');
 
   // Prevent the default action of the link
